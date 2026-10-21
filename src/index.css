@@ -1,0 +1,45 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 80px 20px;
+  background-color: #000000;
+}
+
+.page-title {
+  color: #5d5cd6;
+  font-family: serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Stacks to 2 columns on tablets and 1 column on phones */
+@media (max-width: 950px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 650px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
